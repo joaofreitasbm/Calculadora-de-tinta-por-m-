@@ -39,6 +39,8 @@ def loop():
         areaPiso = Decimal(largPiso) * Decimal(compPiso)
         areaCaixa = round(float(areaPeça) * float(qntCaixa), 2)
 
+        teste
+
         # resultado corrigido
         print('\nA cerâmica que você escolheu cobre', areaCaixa, 'm² por caixa.')
         print('Seu piso tem', areaPiso, 'm²')
