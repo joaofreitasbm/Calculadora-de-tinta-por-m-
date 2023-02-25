@@ -11,6 +11,8 @@ def loop():
 
     if modo == '1':
         print('Por gentileza, insira os dados solicitados abaixo. Use apenas numeros.')
+
+        # parametros parede
         largParede = float(input('Largura da parede em metros: '))
         altParede = float(input('Altura da parede em metros: '))
         cobertura = float(input('Cobertura por m² informada pelo fabricante da tinta. '))
@@ -18,7 +20,7 @@ def loop():
 
         areaParede = largParede * altParede
         lataTinta = areaParede / (cobertura * tamLata)
-        
+
         # resultado corrigido
         print('\nA tinta que você escolheu cobre', round(cobertura * tamLata), 'm² por lata.')
         print('Sua parede tem', areaParede, 'm²')
@@ -27,7 +29,7 @@ def loop():
     elif modo == '2':
         print('Por gentileza, insira os dados solicitados abaixo. Use apenas numeros.')
 
-        # parametros parede
+        # parametros piso
         largPiso = Decimal(input('Largura do piso em metros: '))
         compPiso = Decimal(input('Comprimento do piso em metros: '))
         tamPeça = (input('Tamanho da peça de cerâmica (ex. 60x60, 120x120, etc): '))
@@ -36,7 +38,7 @@ def loop():
         qntCaixa = Decimal(input('Quantas peças vem por caixa. '))
         areaPiso = Decimal(largPiso) * Decimal(compPiso)
         areaCaixa = round(float(areaPeça) * float(qntCaixa), 2)
-    
+
         # resultado corrigido
         print('\nA cerâmica que você escolheu cobre', areaCaixa, 'm² por caixa.')
         print('Seu piso tem', areaPiso, 'm²')
